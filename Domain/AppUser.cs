@@ -5,8 +5,6 @@ namespace Domain
 {
     public class AppUser:IdentityUser
     {
-        public string DisplayName { get; set; } 
-        public ShoppingBasket ShoppingBasket { get; set; }
-        public ICollection<ShoppingBasketPair> Products { get; set; }  
+        public string DisplayName { get; set; }   
     }
 }

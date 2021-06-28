@@ -1,5 +1,4 @@
 using Application.Interfaces;
-using Application.Products;
 using Infrastructure.Security;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -24,7 +23,7 @@ namespace API.Extensions
             {
                 opt.UseSqlServer(config.GetConnectionString("DefaultConnection"));
             });
-            services.AddMediatR(typeof(Create.Handler).Assembly);
+            //services.AddMediatR(typeof(Create.Handler).Assembly);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IUserAccessor,UserAccessor>();
 
